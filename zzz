@@ -1,0 +1,88 @@
+python3 -m venv venv
+pip install django-environ ???
+source .venv/bin/activate
+pip install -r requirments.txt
+
+cd apps
+python3 ../manage.py startapp tasks
+python3 ../manage.py startapp project
+
+
+
+
+
+
+
+
+
+
+priority.py
+from enum import Enum
+
+
+class Priority(Enum):
+LOW = (1, 'low')
+MEDIUM = (2, 'medium')
+HIGH = (3, 'high')
+CRITICAL = (4, 'critical')
+
+@classmethod
+def choices(cls):
+return [(priority.value[0], priority.value[1]) for priority in cls]
+
+def __getitem__(self, item):
+return self.value[item]
+
+
+в таске надо еще сделать python package который называется choices
+и там два файло priority.py и statuses.py
+
+cd tasks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
